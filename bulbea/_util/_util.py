@@ -64,10 +64,10 @@ def _check_pandas_dataframe(data, raise_err = False):
     return _check_type(data, pd.DataFrame, raise_err = raise_err, expected_type_name = 'pandas.DataFrame')
 
 def _check_iterable(o, raise_err = False):
-    return _check_type(o, collections.Iterable, raise_err = raise_err, expected_type_name = '(str, list, tuple)')
+    return _check_type(o, collections.abc.Iterable, raise_err = raise_err, expected_type_name = '(str, list, tuple)')
 
 def _check_sequence(o, string = True, raise_err = False):
-    return _check_type(o, collections.Sequence, raise_err = raise_err, expected_type_name = '(list, tuple)')
+    return _check_type(o, collections.abc.Sequence, raise_err = raise_err, expected_type_name = '(list, tuple)')
 
 def _check_environment_variable_set(variable, raise_err = False):
     _check_str(variable, raise_err = raise_err)
