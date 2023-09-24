@@ -172,7 +172,7 @@ class Share(Entity):
         self.source    = source
         self.ticker    = ticker
 
-        self.update(start = start, dataset)
+        self.update(dataset)
 
     def update(self, dataset):
         '''
